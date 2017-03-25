@@ -7,7 +7,7 @@ Udacity 第 4 个项目：[在线简历](https://github.com/udacity/frontend-nan
 ## 如何运行
 
 **第 1 步(完成所需时间：10分钟左右)：** 首先在 [高德](http://lbs.amap.com/) 上注册并申请 API Key ***(是 Web 端的而不是 Web 服务，切记切记)*** ，详细申请步骤可按照下面帖子写的：
-- [Google 地图 api 的替代选择](http://discussions.youdaxue.com/t/google-api/26290)
+- [申请使用高德地图 api](http://discussions.youdaxue.com/t/api/37094)
 
 **第 2 步：** 将 `index.html` 文件里的第 29 行代码的 `API_KEY` 换成你上面上一步申请到的 API Key
 
