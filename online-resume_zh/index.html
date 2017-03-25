@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<!--
+这是一个HTML文档。 它包含有关网站中元素如何排列的信息。 
+换句话说，它描述了一个网站的布局。
+
+我迫不及待地想看到你放在一起的简历！
+
+Cameron Pittman，Udacity课程开发人员
+-->
+
+<!--
+网站的<head>通常链接到页面需要加载的重要资源。 
+您会看到很多<link>链接到CSS文件的样式和<scripts>为JavaScript文件来构建交互。
+-->
+<html>
+
+<head>
+  <!-- 这告诉浏览器以哪一种格式解析文档 -->
+  <meta charset="utf-8">
+
+  <!-- 告诉浏览器这个页面的标题应该是什么 -->
+  <title>Resume</title>
+
+  <!-- 读取 style 文件 -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- 加载高德地图，将下面的 API_KEY 换成你的 API Key -->
+  <script src="http://webapi.amap.com/maps?v=1.3&key=API_KEY"></script>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+  <div id="main">
+    Hello world! <!-- 这行代码需要删除，这里只作个测试 -->
+
+    <div id="header" class="center-content clear-fix">
+      <ul id="topContacts" class="flex-box"></ul>
+    </div>
+    <div style="clear: both;"></div>
+    <div id="workExperience" class="gray">
+      <h2>工作经历</h2>
+    </div>
+    <div id="projects">
+      <h2>项目</h2>
+    </div>
+    <div id="education" class="gray">
+      <h2>教育</h2>
+    </div>
+    <div id="mapDiv">
+      <h2>我居住和工作的地方</h2>
+    </div>
+    <div id="lets-connect" class="dark-gray">
+      <h2 class="orange center-text">Let's Connect</h2>
+      <ul id="footerContacts" class="flex-box">
+      </ul>
+    </div>
+  </div>
+
+  <!-- 
+  “HTML 由浏览器按文件中出现的顺序加载，如果首先加载JavaScript，那么它会先对 HTML 做出改变，但是可能不起作用，因为 JavaScript 将在 HTML 加载之前就被加载了 因此，将JavaScript放在HTML页面底部通常是最好的策略。“
+  https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
+
+  <!-- "默认情况下，Javascript资源往往会阻止任何其他并行下载的发生。 所以，您可以想象如果 <head> 上有很多<script>标签，调用多个外部脚本会阻止HTML加载，从而使用户遇到空白的白屏问题，因为页面上的其他内容不可以加载，直到 JS文件已经完全加载。"
+    http://stackoverflow.com/questions/4396849/does-the-script-tag-position-in-html-affects-performance-of-the-webpage -->
+
+  <!--
+  jQuery是一个常见的JavaScript库，用于读取和更改文档对象模型（DOM）。 DOM是一个包含有关在网站上实际可见的信息的树。
+
+   虽然HTML是静态文档，但浏览器将HTML转换为DOM，DOM可以更改。  事实上，JavaScript的力量来自于操纵DOM的能力，DOM本质上是一个JavaScript对象。 当JavaScript使某些有趣的事情发生在网站上时，很可能是由于JavaScript改变了DOM而发生的。 jQuery是快速和容易使用的，但它不会做任何你不能用JavaScript完成的事情。
+  -->
+  <script src="js/jQuery.js"></script>
+
+  <!-- More on helper.js in the class -->
+  <script src="js/helper.js"></script>
+
+  <!--
+   下一行告诉浏览器在哪里下载要编写的JavaScript文件。 在resumeBuilder.js中，当打开该网站index.html时，运行您将编写的代码来构建简历。
+  -->
+  <script src="js/resumeBuilder.js"></script>
+
+
+  <!--
+  这些脚本是用JavaScript编写的。 作为测验的一部分，你可以随意玩弄。 基本上，接下来的几行是检查您是否更改简历的每一部分。 如果您没有对简历的一部分进行任何更改，那么该部分简历不会显示。 更多的在课程中讲到
+  -->
+
+  <script>
+    // 请注意，为什么在这个HTML中会有 JavaScript
+    // 可以在<script>标签之间编写JavaScript。 
+    // 在写完后, 不要忘了用斜线（/）结束 <script> 标签。
+
+
+    // 此外，这是一个JavaScript风格的注释。 您可以使用两个斜杠写注释：
+
+    //  两个斜杠注释单行，或
+
+    /*
+        打开和关闭的斜线星号进行多行的注释。
+    */
+
+
+    if (document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('topContacts').style.display = 'none';
+    }
+    if (document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.display = 'none';
+    }
+    if (document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.display = 'none';
+    }
+    if (document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'none';
+    }
+    if (document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.display = 'none';
+    }
+    if (document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('lets-connect').style.display = 'none';
+    }
+    if (document.getElementById('map') === null) {
+      document.getElementById('mapDiv').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
