@@ -27,7 +27,7 @@ $("#mapDiv").append(gaodeMap);
 ## 项目指南
 
 如何做这个项目，看下面的指导
-- [项目详细的指导](https://classroom.udacity.com/nanodegrees/nd001/parts/0011345406/modules/296281861575462/lessons/2962818615239847/concepts/29594685550923)
+- [项目详细的指导](https://classroom.udacity.com/nanodegrees/nd001/parts/0011345406/modules/296281861575462/lessons/2962818615239847/concepts/29594685550923) | 👈左边链接无法访问的点击[此处](https://classroom.udacity.com/nanodegrees/nd001-cn-basic/parts/8466cc34-4001-4ac3-a908-01729473d5e2/modules/549f914e-5a25-4174-b92e-a9c9b5931985/lessons/2962818615239847/concepts/29594685550923)
 
 想完美通过，看下面的文档：
 - [项目审阅标准](https://review.udacity.com/#!/rubrics/498/view)
